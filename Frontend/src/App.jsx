@@ -1,19 +1,25 @@
-import AddProduct from './Pages/AddProduct.jsx'
-import AllProduct from './Pages/AllProduct.jsx'
-import OrderProduct from './Pages/OrderProduct.jsx'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import ProductPage from "./pages/ProductPage";
+import Contact from "./pages/Contact";
 
-const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/AddProduct' element={<AddProduct />}></Route>
-                <Route path='/AllProduct' element={<AllProduct />}></Route>
-                <Route path='/OrderProduct' element={<OrderProduct />}></Route>
-            </Routes>
-        </BrowserRouter>
-    )
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path='/AddProduct' element={<AddProduct />}></Route>
+        <Route path='/AllProduct' element={<AllProduct />}></Route>
+        <Route path='/OrderProduct' element={<OrderProduct />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
