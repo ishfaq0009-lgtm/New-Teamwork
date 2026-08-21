@@ -11,8 +11,8 @@ let app= express();
 app.use(cors())
 app.use(express.json())
 
-app.use("/Product",ProductRoute)
-
 app.listen(4000,async function(){
     console.log("Server is running")
 });
+
+
